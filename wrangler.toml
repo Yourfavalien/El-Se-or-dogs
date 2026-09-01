@@ -1,3 +1,7 @@
 name = "el-senor-dogs"
 compatibility_date = "2026-08-01"
 pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "SITE_CONTENT"
+id = "c42d9cb6f8a5447199426df8b1a70928"
