@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>El Señor Dogs Admin</title><link rel="icon" href="../assets/logo.png"><link rel="stylesheet" href="admin.css"></head>
+<body>
+  <main class="admin-shell">
+    <section class="login-card" id="login-view">
+      <img src="../assets/logo.png" alt="El Señor Dogs"><p class="eyebrow">Private dashboard</p><h1>Welcome back.</h1><p>Enter the admin password to manage the website.</p>
+      <form id="login-form"><label>Password<input id="password" type="password" autocomplete="current-password" required></label><button type="submit">Sign in</button><p class="message" id="login-message" role="alert"></p></form>
+    </section>
+    <section id="dashboard" hidden>
+      <header class="admin-header"><div class="brand"><img src="../assets/logo.png" alt=""><div><p class="eyebrow">Website manager</p><h1>El Señor Dogs</h1></div></div><div class="header-actions"><a href="../index.html" target="_blank">View website ↗</a><button class="secondary" id="logout">Sign out</button></div></header>
+      <div class="statusbar"><span id="save-status">All changes saved</span><button id="save">Publish changes</button></div>
+      <nav class="tabs" aria-label="Dashboard sections"></nav>
+      <form id="editor">
+        <section class="panel" data-panel="homepage"><div class="panel-heading"><p class="eyebrow">Homepage</p><h2>Hero & featured content</h2></div><div class="field-grid">
+          <label class="wide">Headline <span>One line per word/line</span><textarea data-path="home.headlineLines" data-type="lines"></textarea></label>
+          <label class="wide">Description<textarea data-path="home.description"></textarea></label>
+          <label>Hero image path<input data-path="home.heroImage"></label><label>Feature image path<input data-path="home.feature.image"></label>
+          <label>Primary button text<input data-path="home.primaryButton.text"></label><label>Primary button link<input data-path="home.primaryButton.url"></label>
+          <label>Secondary button text<input data-path="home.secondaryButton.text"></label><label>Secondary button link<input data-path="home.secondaryButton.url"></label>
+          <label>Feature label<input data-path="home.feature.kicker"></label><label>Feature heading<input data-path="home.feature.heading"></label>
+          <label class="wide">Feature description<textarea data-path="home.feature.description"></textarea></label><label class="wide">Ticker text<input data-path="home.ticker"></label>
+        </div></section>
+        <section class="panel" data-panel="menu" hidden><div class="panel-heading"><p class="eyebrow">Food & drinks</p><h2>Menu</h2><button type="button" class="secondary" id="add-menu-item">+ Add item</button></div><div id="menu-items" class="card-list"></div></section>
+        <section class="panel" data-panel="announcements" hidden><div class="panel-heading"><p class="eyebrow">Promotions</p><h2>Announcements & banners</h2></div><div class="field-grid">
+          <label class="toggle wide"><input type="checkbox" data-path="site.announcement.enabled"> Show announcement</label><label class="wide">Announcement text<input data-path="site.announcement.text"></label><label>Link label<input data-path="site.announcement.linkText"></label><label>Link URL<input data-path="site.announcement.linkUrl"></label>
+          <label class="toggle wide"><input type="checkbox" data-path="site.temporaryBanner.enabled"> Show temporary banner</label><label class="wide">Banner text<input data-path="site.temporaryBanner.text"></label><label>Link label<input data-path="site.temporaryBanner.linkText"></label><label>Link URL<input data-path="site.temporaryBanner.linkUrl"></label>
+        </div></section>
+        <section class="panel" data-panel="events" hidden><div class="panel-heading"><p class="eyebrow">Pop-ups</p><h2>Events</h2><button type="button" class="secondary" id="add-event">+ Add event</button></div><div id="events" class="card-list"></div></section>
+        <section class="panel" data-panel="business" hidden><div class="panel-heading"><p class="eyebrow">Business details</p><h2>Status, contact & social</h2></div><div class="field-grid">
+          <label>Open/closed status<select data-path="site.hours.manualStatus"><option value="auto">Use schedule</option><option value="open">Open</option><option value="closed">Closed</option></select></label><label>Timezone<input data-path="site.hours.timezone"></label>
+          <label>Email<input type="email" data-path="site.contact.email"></label><label>Phone<input data-path="site.contact.phone"></label><label class="wide">Address<input data-path="site.contact.address"></label>
+          <label>Instagram URL<input data-path="site.social.instagram"></label><label>Facebook URL<input data-path="site.social.facebook"></label><label>TikTok URL<input data-path="site.social.tiktok"></label><label>Footer tagline<input data-path="site.tagline"></label>
+        </div><h3>Business hours</h3><div id="hours" class="hours-grid"></div></section>
+        <section class="panel" data-panel="sections" hidden><div class="panel-heading"><p class="eyebrow">Page visibility</p><h2>Turn sections on or off</h2></div><div id="sections" class="toggle-list"></div></section>
+        <section class="panel" data-panel="gallery" hidden><div class="panel-heading"><p class="eyebrow">Photos</p><h2>Gallery</h2><button type="button" class="secondary" id="add-photo">+ Add photo</button></div><p class="help">Use an existing path from the assets folder or a full hosted image URL.</p><div id="gallery" class="card-list"></div></section>
+        <section class="panel" data-panel="pages" hidden><div class="panel-heading"><p class="eyebrow">Other pages</p><h2>Story, catering & contact</h2></div><div class="field-grid">
+          <label>Story heading<input data-path="story.heading"></label><label>Story image<input data-path="story.image"></label><label class="wide">Story paragraphs <span>Separate paragraphs with a blank line</span><textarea data-path="story.paragraphs" data-type="paragraphs"></textarea></label>
+          <label>Catering heading<input data-path="catering.heading"></label><label>Catering title<input data-path="catering.title"></label><label class="wide">Catering description<textarea data-path="catering.description"></textarea></label><label>Catering availability note<input data-path="catering.availabilityText"></label><label>Jotform URL<input data-path="catering.formUrl"></label>
+          <label>Contact heading<input data-path="contact.heading"></label><label>Contact title<input data-path="contact.title"></label><label class="wide">Contact description<textarea data-path="contact.description"></textarea></label><label>Formspree endpoint<input data-path="contact.formAction"></label>
+        </div></section>
+      </form>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body></html>

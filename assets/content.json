@@ -1,0 +1,56 @@
+{
+  "site": {
+    "businessName": "El Señor Dogs",
+    "tagline": "Bacon-wrapped. Street-style. Bold flavor.",
+    "announcement": { "enabled": false, "text": "Catch us at our next pop-up!", "linkText": "See details", "linkUrl": "#events" },
+    "temporaryBanner": { "enabled": false, "text": "", "linkText": "", "linkUrl": "" },
+    "contact": { "email": "", "phone": "", "address": "" },
+    "social": { "instagram": "", "facebook": "", "tiktok": "" },
+    "hours": {
+      "manualStatus": "auto",
+      "timezone": "America/Chicago",
+      "schedule": [
+        { "day": "Sunday", "closed": true, "open": "", "close": "" },
+        { "day": "Monday", "closed": true, "open": "", "close": "" },
+        { "day": "Tuesday", "closed": true, "open": "", "close": "" },
+        { "day": "Wednesday", "closed": true, "open": "", "close": "" },
+        { "day": "Thursday", "closed": true, "open": "", "close": "" },
+        { "day": "Friday", "closed": true, "open": "", "close": "" },
+        { "day": "Saturday", "closed": true, "open": "", "close": "" }
+      ]
+    }
+  },
+  "sections": { "homeFeature": true, "menu": true, "sides": true, "events": true, "gallery": false, "story": true, "catering": true, "contact": true },
+  "home": {
+    "eyebrow": "",
+    "headlineLines": ["EL", "SEÑOR", "DOGS"],
+    "description": "Street-style bacon-wrapped hot dogs with bold flavor. Simple menu. No shortcuts.",
+    "heroImage": "assets/hero-dog.png",
+    "primaryButton": { "text": "View the menu", "url": "menu.html" },
+    "secondaryButton": { "text": "Catering", "url": "catering.html" },
+    "ticker": "BACON-WRAPPED • STREET-STYLE • BOLD FLAVOR • EL SEÑOR DOGS •",
+    "feature": { "kicker": "What we do", "heading": "Bacon-wrapped perfection, straight from the grill.", "description": "Three signature dogs. Real street flavors. Every dog wrapped in crispy bacon and loaded to order.", "linkText": "Explore the menu", "linkUrl": "menu.html", "image": "assets/wizzy.png" }
+  },
+  "menu": {
+    "eyebrow": "What's cooking",
+    "heading": "The Menu",
+    "categories": [
+      { "id": "hot-dogs", "name": "Hot Dogs", "items": [
+        { "id": "wizzy", "name": "El Wizzy NOT a Glizzy", "price": 4, "description": "A simple bacon-wrapped hot dog dressed with the condiments you crave.", "image": "assets/wizzy.png", "availability": "available", "featured": true },
+        { "id": "viva", "name": "Viva Mexico!", "price": 5, "description": "Bacon-wrapped hot dog with fresh pico de gallo.", "image": "assets/viva.png", "availability": "available", "featured": false },
+        { "id": "callejero", "name": "El Perro Callejero", "price": 6, "description": "Bacon-wrapped hot dog with melted cheese and hot Cheetos.", "image": "assets/callejero.png", "availability": "available", "featured": false }
+      ]},
+      { "id": "drinks-sides", "name": "Drinks & Sides", "items": [
+        { "id": "chips", "name": "Chips", "price": 1, "description": "", "image": "", "availability": "available", "featured": false },
+        { "id": "water", "name": "Water", "price": 1, "description": "", "image": "", "availability": "available", "featured": false },
+        { "id": "soda", "name": "Soda", "price": 2, "description": "", "image": "", "availability": "available", "featured": false }
+      ]}
+    ],
+    "toppings": { "heading": "Toppings", "priceLabel": "$0.50 each", "items": ["Nacho Cheese", "Chile Toreados", "Grilled Onions", "Hot Cheetos"] }
+  },
+  "events": [],
+  "gallery": [],
+  "story": { "eyebrow": "Behind the grill", "heading": "Our Story", "image": "assets/grill.png", "paragraphs": ["El Señor Dogs started with a simple idea — take the classic bacon-wrapped hot dog and do it right. No gimmicks, no shortcuts, just real street-style food with bold flavor.", "Inspired by the sizzling carts and late-night grills of the streets, every dog is wrapped in crispy bacon and loaded with fresh toppings. We keep the menu simple because we believe in doing a few things and doing them well.", "From the first bite to the last, it's all about that crunch, that flavor, and that feeling of eating something made with care."], "pillars": ["Bacon-wrapped", "Street-style", "Bold flavor"] },
+  "catering": { "eyebrow": "Feed the crowd", "heading": "Catering", "title": "Bring El Señor Dogs to your event", "description": "Whether it's a birthday party, corporate event, wedding, or block party — we'll set up the grill and bring the flavor. Fresh bacon-wrapped hot dogs made to order, right at your venue.", "availabilityText": "Available 7 days a week", "formUrl": "https://form.jotform.com/262238219583159" },
+  "contact": { "eyebrow": "Get in touch", "heading": "Contact Us", "title": "We'd love to hear from you", "description": "Questions, feedback, or just want to say hi? Drop us a message and we'll get back to you as soon as we can.", "formAction": "https://formspree.io/f/xwlebavg" }
+}
