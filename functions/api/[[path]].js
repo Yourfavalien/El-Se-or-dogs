@@ -18,6 +18,7 @@ export async function onRequest(context){
     return json({ok:true},200,{'Set-Cookie':`esd_admin=${token}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=43200`});
   }
   if(path==='logout'&&request.method==='POST')return json({ok:true},200,{'Set-Cookie':'esd_admin=; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=0'});
+  if(path==='session'&&request.method==='GET')return await sessionValid(request,env)?json({authenticated:true}):json({error:'Unauthorized'},401);
   if(path==='content'&&request.method==='GET'){
     const stored=await defaultContent(env);return json(stored||await fallbackContent(request),200,{'Cache-Control':'public, max-age=30'});
   }
